@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="@dimen/_120sdp"
+    android:background="@drawable/back_10sdp"
+    android:backgroundTint="#EE00FF"
+    android:orientation="vertical"
+    android:id="@+id/background"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:paddingVertical="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bevietnam_bold"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/white"
+        android:text="Did you know?"/>
+
+    <TextView
+        android:id="@+id/factText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bevietnam_regular"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="@color/white"
+        android:text=""/>
+
+</LinearLayout>

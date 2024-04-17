@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/back_8sdp"
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:backgroundTint="#FAFAFF">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#20AAAAAA"
+        app:cardCornerRadius="@dimen/_6sdp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11ssp"
+            android:text="The Goal Title"
+            android:fontFamily="@font/bevietnam_medium"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10ssp"
+            android:text="Goal Description"
+            android:fontFamily="@font/bevietnam_regular"
+            android:textColor="#8E8E93"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            app:indicatorSize="@dimen/_30sdp"
+            android:progress="0"
+            android:max="100"
+            android:min="0"
+            android:scaleX="-1"
+            android:scaleY="-1"
+            android:layout_gravity="center"
+            app:trackCornerRadius="@dimen/_10sdp"
+            app:trackThickness="@dimen/_4sdp"
+            app:trackColor="#20AAAAAA"
+            app:indicatorColor="#F8B546"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/progressCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textSize="@dimen/_7ssp"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bevietnam_medium"/>
+
+    </FrameLayout>
+
+</LinearLayout>

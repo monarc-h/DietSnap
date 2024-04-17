@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@id/container1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <com.domonz.dietsnap.Utils.CustomViewPager
+                android:id="@+id/progressViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/btnNext"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:src="@drawable/baseline_arrow_forward_ios_13"
+                    android:padding="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_gravity="end|center_vertical"
+                    app:tint="#FAA057" />
+
+            </FrameLayout>
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:dotsColor="#50707070"
+                app:dotsCornerRadius="8dp"
+                app:dotsSize="@dimen/_6sdp"
+                app:dotsSpacing="@dimen/_2sdp"
+                app:dotsWidthFactor="4"
+                app:selectedDotColor="#F89738"
+                app:progressMode="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/container2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Goals"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:fontFamily="@font/bevietnam_semi_bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recGoals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_goals"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Explore"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:fontFamily="@font/bevietnam_semi_bold"/>
+
+                <LinearLayout
+                    android:id="@+id/findDiets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:src="@drawable/finddiets"/>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12ssp"
+                            android:text="Find Diets"
+                            android:fontFamily="@font/bevietnam_medium"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_11ssp"
+                            android:text="Find premade diets according to your cuisine"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/bevietnam_regular"
+                            android:textColor="#8E8E93"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:src="@drawable/findnutritionist"/>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12ssp"
+                            android:text="Find Nutritionist"
+                            android:fontFamily="@font/bevietnam_medium"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_11ssp"
+                            android:text="Get customized diets to achieve your health
+goal"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/bevietnam_regular"
+                            android:textColor="#8E8E93"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>
